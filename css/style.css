@@ -1,0 +1,124 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #bfbfbf;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1400;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.navbar nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Основной отступ для тела — чтобы не пряталось под меню */
+body {
+    margin: 0;
+    font-family: Georgia;
+    font-size: 20px;
+    padding-top: 100px;
+    background: linear-gradient(#f3f2f2, #e0e0e0, #b3b3b3);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    }
+      
+@keyframes gradient {
+0% {background-position: 0% 50%;}
+50% {background-position: 100% 50%;}
+100% {background-position: 0% 50%;}
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Галерея */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.gallery img {
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.attraction img {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+.attraction {
+    overflow: auto;
+    margin-bottom: 40px;
+}
+
+.factory img {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+.factory {
+    overflow: auto;
+    margin-bottom: 40px;
+}
+
+.scroll-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+  }
+  
+.card {
+flex: 0 0 280px;
+background: #fff;
+border-radius: 12px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+padding: 15px;
+scroll-snap-align: start;
+}
+
+.card img {
+width: 100%;
+border-radius: 10px;
+margin-bottom: 10px;
+}
+
+.card h3 {
+margin: 0 0 10px;
+font-size: 18px;
+}
+
+.card p {
+font-size: 14px;
+line-height: 1.4;
+}
+  
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #b6b6b6;
+    margin-top: 40px;
+}

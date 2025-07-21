@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ToDoList Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="todo.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container my-4">
+    <header>
+        <h1 style="text-align: center;">Культурная жизнь Нижнего Тагила</h1>
+        <div class="navbar">
+          <nav>
+            <a href="index.html">Главная</a>
+            <a href="dostoprim.html">Достопримечательности</a>
+            <a href="factories.html">Заводы</a>
+            <a href="culture.html">Культура</a>
+            <a href="contact.html">Обратная связь</a>
+            <a href="todo.html">ToDo</a>
+          </nav>
+        </div>
+      </header>
+    <h2 class="mb-4">ToDoList Pro</h2>
+
+    <!-- Форма создания задачи -->
+    <form name="toDoForm" class="mb-4" onsubmit="event.preventDefault(); addToDo();">
+        <div class="row mb-2">
+            <div class="col">
+                <input name="title" class="form-control" type="text" placeholder="Название задачи" required />
+            </div>
+            <div class="col">
+                <select name="priority" class="form-select">
+                    <option value="high">Высокий приоритет</option>
+                    <option value="medium" selected>Средний приоритет</option>
+                    <option value="low">Низкий приоритет</option>
+                </select>
+            </div>
+            <div class="col">
+                <input name="date" type="date" class="form-control" required />
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col">
+                <textarea name="description" class="form-control" placeholder="Описание задачи"></textarea>
+            </div>
+            <div class="col-2">
+                <input name="color" type="color" class="form-control form-control-color" value="#0d6efd" title="Выберите цвет" />
+            </div>
+            <div class="col-2 d-grid">
+                <button type="submit" class="btn btn-primary">Добавить задачу</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Панель сортировки и фильтрации -->
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <label for="sortSelect">Сортировать по:</label>
+            <select id="sortSelect" class="form-select" onchange="applyFiltersAndSort()">
+                <option value="date">Дате</option>
+                <option value="priority">Приоритету</option>
+                <option value="title">Названию</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="filterSelect">Фильтр по приоритету:</label>
+            <select id="filterSelect" class="form-select" onchange="applyFiltersAndSort()">
+                <option value="all">Все</option>
+                <option value="high">Высокий</option>
+                <option value="medium">Средний</option>
+                <option value="low">Низкий</option>
+            </select>
+        </div>
+        <div class="col-md-4 d-flex align-items-end">
+            <button class="btn btn-danger w-100" onclick="deleteSelected()">Удалить выделенные</button>
+        </div>
+    </div>
+
+    <!-- Контейнер для задач -->
+    <div id="toDoContainer"></div>
+</div>
+</body>
+</html>

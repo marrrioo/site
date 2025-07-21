@@ -8,7 +8,7 @@
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
           navigator.serviceWorker
-            .register('/serviceworker.js')
+            .register('serviceworker.js')
             .then(function (reg) {
               console.log('ServiceWorker зарегистрирован: ', reg.scope);
             })

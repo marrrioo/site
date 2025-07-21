@@ -1,20 +1,22 @@
 const CACHE_NAME = "ntagil-pwa-v1";
 const urlsToCache = [
-  "index.html",
-  "dostoprim.html",
-  "factories.html",
-  "culture.html",
-  "contact.html",
-  "todo.html",
-  "css/style.css",
-  "images/vid_night.jpeg",
-  "images/lisya_gora.jpeg",
-  "images/museum.jpeg",
-  "images/pond.jpeg",
-  "images/factory.jpeg",
-  "icons/icon-192.png",
-  "icons/icon-512.png"
-];
+    '/',
+    '/index.html',
+    '/dostoprim.html',
+    '/factories.html',
+    '/culture.html',
+    '/contact.html',
+    '/todo.html',
+    '/css/style.css',
+    '/todo.js',
+    '/images/vid_night.jpeg',
+    '/images/lisya_gora.jpeg',
+    '/images/museum.jpeg',
+    '/images/pond.jpeg',
+    '/images/factory.jpeg',
+    '/manifest.json'
+  ];
+  
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

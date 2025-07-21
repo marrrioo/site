@@ -1,7 +1,7 @@
 {
     "name": "Путеводитель по Нижнему Тагилу",
     "short_name": "Тагил PWA",
-    "start_url": "./index.html",
+    "start_url": ".",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#003366",

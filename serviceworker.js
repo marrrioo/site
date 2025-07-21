@@ -8,7 +8,6 @@ const urlsToCache = [
     '/contact.html',
     '/todo.html',
     '/css/style.css',
-    '/todo.js',
     '/images/vid_night.jpeg',
     '/images/lisya_gora.jpeg',
     '/images/museum.jpeg',

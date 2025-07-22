@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Заводы Нижнего Тагила</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function () {
+            navigator.serviceWorker
+              .register('serviceworker.js')
+              .then(function (reg) {
+                console.log('ServiceWorker зарегистрирован: ', reg.scope);
+              })
+              .catch(function (err) {
+                console.log('Ошибка регистрации ServiceWorker: ', err);
+              });
+          });
+        }
+      </script>
 </head>
 <body>
     <header>

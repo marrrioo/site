@@ -13,7 +13,6 @@ const urlsToCache = [
     '/images/museum.jpeg',
     '/images/pond.jpeg',
     '/images/factory.jpeg',
-    '/images/vid_night.jpeg',
     '/manifest.json'
   ];
   

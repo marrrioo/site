@@ -40,12 +40,6 @@ const urlsToCache = [
     '/images/ub.jpeg',
     '/images/uvz.jpeg',
     '/images/zav.jpeg',
-    
-
-
-
-
-
     '/manifest.json'
   ];
   
